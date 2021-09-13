@@ -25,7 +25,7 @@ load the data back into S3
 
 ### Insight 1 - which company pays the best (general vs. H1b)
 
-### Insight 2 -which company files the most number of h1b cases
+### Insight 2 - which company files the most number of h1b cases
 
 ### Insight 3 - which occupation earns the best (general)
 
