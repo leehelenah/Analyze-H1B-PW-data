@@ -37,5 +37,4 @@ load the data back into S3
 
 ## Appendix:
 This project was inspired by
-https://github.com/Modingwa/Data-Engineering-Capstone-Project
 https://pttcareer.com/oversea_job/M.1601580566.A.B11.html
