@@ -27,7 +27,7 @@ load the data back into S3
 
 ### Insight 2 - which company files the most number of h1b cases
 
-### Insight 3 - which occupation earns the best (general)
+### Insight 3 - which occupation has a high prevailing wage
 
 ### Insight 4 - which county has the best rent/price ratio?
 
