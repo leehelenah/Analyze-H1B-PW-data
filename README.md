@@ -29,11 +29,13 @@ load the data back into S3
 
 ### Insight 3 - which occupation has a high prevailing wage
 
-### Insight 4 - which zipcode has the best rent/price ratio?
 
-### Insight 5 - which zipcode area has the lowest rent/wage ratio
+### Insight 4 - which zipcode area has the highest and lowest Rent-to-Price ratio
 
-### Insight 6 - which zipcode has the lowest price/wage ratio
+### Insight 5 - which zipcode area has the lowest Rent-to-Wage ratio (Aim to indentify the best places to live for new immigrants)
+
+### Insight 6 - which zipcode area has the lowest Price-to-Wage ratio (Aim to indentify the best places to live for new immigrants)
+
 
 ## Appendix:
 This project was inspired by
