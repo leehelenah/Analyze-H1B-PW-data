@@ -4,12 +4,11 @@
 Most of my income spend on rent. I would like to know if the same happen to all Americans and immigrants. Therefore, I load the income, rent, and price data to Spark. I believe we can come up with some ideas to be rich by looking into this data. 
 
 ## Data Source
-**PW** - Data from Department of Labor. The prevailing wage is used as a measure of the minimum allowable wage to be paid by employers seeking to employ a foreign national in H-1B status. It is a calculation of the average wage rate paid by employers to similarly-employed workers in substantially comparable jobs in the geographic area of intended employment. <br>
+**PW** - Data from Department of Labor. Definition: The prevailing wage is used as a measure of the minimum allowable wage to be paid by employers seeking to employ a foreign national in H-1B status. It is a calculation of the average wage rate paid by employers to similarly-employed workers in substantially comparable jobs in the geographic area of intended employment. Size: 4 files, 600k rows. <br>
 
-**LCA** - Data from Department of Labor, disclose H1B applicants' income and demographic information <br>
+**LCA** - Data from Department of Labor, disclose H1B applicants' income and demographic information. Size: 2 files, 460k rows. <br>
 
-**Home Rent and Price** - Data from Zillow
-
+**Home Rent and Price** - Data from Zillow. Size: 2 files, 60k rows. <br>
 
 ## Data Quality Check and ETL pipeline:
 
@@ -65,6 +64,8 @@ The pipelines would be run on a daily basis by 7 am every day. <br>
 The database needed to be accessed by 100+ people. <br>
  --> Not a problem at all. The data is on S3. We can share access with all of them. <br>
 
+## Why Spark
+Spark is suitable for large dataset and supports parallel operations. Also, it supports sql queries. As I am going to further analyze the data, this is quite helpful.
 
 ## Appendix:
 This project was inspired by
