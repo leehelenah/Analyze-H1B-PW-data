@@ -21,6 +21,18 @@ process them using Spark
 load the data back into S3
 
 
+## Data Model
+**PW** - Data from Department of Labor. The prevailing wage is used as a measure of the minimum allowable wage to be paid by employers seeking to employ a foreign national in H-1B status. It is a calculation of the average wage rate paid by employers to similarly-employed workers in substantially comparable jobs in the geographic area of intended employment. <br>
+
+CASE_STATUS, PWD_SOC_CODE, PWD_WAGE_RATE, PRIMARY_WORKSITE_CITY, PRIMARY_WORKSITE_COUNTY, PRIMARY_WORKSITE_STATE, PRIMARY_WORKSITE_POSTAL_CODE, EMPLOYER_CITY, EMPLOYER_STATE, EMPLOYER_POSTAL_CODE, EMPLOYER_COUNTRY, BUSINESS_NAME, JOB_TITLE, SUGGESTED_SOC_CODE, SUGGESTED_SOC_TITLE, PRIMARY_EDUCATION_LEVEL, OTHER_EDUCATION, MAJOR, SECOND_DIPLOMA, SECOND_DIPLOMA_MAJOR, FILE_SOURCE, WORKSITE_COUNTY_UPPER
+
+
+**LCA** - Data from Department of Labor, disclose H1B applicants' income and demographic information <br>
+CASE_STATUS, DECISION_DATE, JOB_TITLE, SOC_CODE, SOC_TITLE, FULL_TIME_POSITION, WORKSITE_COUNTY, WORKSITE_STATE, WORKSITE_POSTAL_CODE, EMPLOYER_NAME, WAGE_RATE_OF_PAY_FROM, WAGE_RATE_OF_PAY_TO, WAGE_UNIT_OF_PAY, PREVAILING_WAGE, PW_UNIT_OF_PAY, ANNUAL_INCOME, FILE_SOURCE, WORKSITE_COUNTY_UPPER
+
+**Zillow_price_rent** - Data from Zillow, average home rent and price by zipcode <br>
+Zipcode, State, Metro, CountyName, 2021_07_Price, 2021_07_Rent
+
 ## This report shows
 
 ### Insight 1 - which company pays the best (by prevailing wage and by H1B)
