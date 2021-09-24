@@ -29,11 +29,11 @@ load the data back into S3
 
 ### Insight 3 - which occupation earns the best (general)
 
-### Insight 4 - which county has the best rent/price ratio?
+### Insight 4 - which zipcode area has the highest and lowest Rent-to-Price ratio
 
-### Insight 5 - which county has the lowest rent/wage ratio
+### Insight 5 - which zipcode area has the lowest Rent-to-Wage ratio (Aim to indentify the best places to live for new immigrants)
 
-### Insight 6 - which county has the lowest price/wage ratio
+### Insight 6 - which zipcode area has the lowest Price-to-Wage ratio (Aim to indentify the best places to live for new immigrants)
 
 ## Appendix:
 This project was inspired by
