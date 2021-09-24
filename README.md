@@ -33,10 +33,10 @@ load the data back into S3
 
 
 ## Data Model
-**PW** - Prevailing Wage
+**PW** - Prevailing Wage <br>
 CASE_STATUS, PWD_SOC_CODE, PWD_WAGE_RATE, PRIMARY_WORKSITE_CITY, PRIMARY_WORKSITE_COUNTY, PRIMARY_WORKSITE_STATE, PRIMARY_WORKSITE_POSTAL_CODE, EMPLOYER_CITY, EMPLOYER_STATE, EMPLOYER_POSTAL_CODE, EMPLOYER_COUNTRY, BUSINESS_NAME, JOB_TITLE, SUGGESTED_SOC_CODE, SUGGESTED_SOC_TITLE, PRIMARY_EDUCATION_LEVEL, OTHER_EDUCATION, MAJOR, SECOND_DIPLOMA, SECOND_DIPLOMA_MAJOR, FILE_SOURCE, WORKSITE_COUNTY_UPPER
 
-**LCA** - H1B applicant's data
+**LCA** - H1B applicant's data <br>
 CASE_STATUS, DECISION_DATE, JOB_TITLE, SOC_CODE, SOC_TITLE, FULL_TIME_POSITION, WORKSITE_COUNTY, WORKSITE_STATE, WORKSITE_POSTAL_CODE, EMPLOYER_NAME, WAGE_RATE_OF_PAY_FROM, WAGE_RATE_OF_PAY_TO, WAGE_UNIT_OF_PAY, PREVAILING_WAGE, PW_UNIT_OF_PAY, ANNUAL_INCOME, FILE_SOURCE, WORKSITE_COUNTY_UPPER
 
 **Zillow_price_rent** - Data from Zillow, average home rent and price by zipcode <br>
@@ -58,12 +58,12 @@ Zipcode, State, Metro, CountyName, 2021_07_Price, 2021_07_Rent
 
 
 ## What if
-The data was increased by 100x.
- --> We can utilize Spark, use more cores, and process the data in parallel.
-The pipelines would be run on a daily basis by 7 am every day. 
- --> We can utilize Airflow or AWS Glue and set up daily pipeline.
-The database needed to be accessed by 100+ people.
- --> Not a problem at all. The data is on S3. We can share access with all of them.
+The data was increased by 100x. <br>
+ --> We can utilize Spark, use more cores, and process the data in parallel. <br>
+The pipelines would be run on a daily basis by 7 am every day. <br>
+ --> We can utilize Airflow or AWS Glue and set up daily pipeline. <br>
+The database needed to be accessed by 100+ people. <br>
+ --> Not a problem at all. The data is on S3. We can share access with all of them. <br>
 
 
 ## Appendix:
