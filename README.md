@@ -21,7 +21,7 @@ process them using Spark
 load the data back into S3
 
 
-## This report will show
+## This report shows
 
 ### Insight 1 - which company pays the best (by prevailing wage and by H1B)
 
