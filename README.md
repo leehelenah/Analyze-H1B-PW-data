@@ -23,17 +23,17 @@ load the data back into S3
 
 ## This report will show
 
-### Insight 1 - which company pays the best (general vs. H1b)
+### Insight 1 - which company pays the best (by prevailing wage and by H1B)
 
 ### Insight 2 - which company files the most number of h1b cases
 
-### Insight 3 - which occupation earns the best (general)
+### Insight 3 - which occupation has a high prevailing wage
 
-### Insight 4 - which county has the best rent/price ratio?
+### Insight 4 - which zipcode has the best rent/price ratio?
 
-### Insight 5 - which county has the lowest rent/wage ratio
+### Insight 5 - which zipcode area has the lowest rent/wage ratio
 
-### Insight 6 - which county has the lowest price/wage ratio
+### Insight 6 - which zipcode has the lowest price/wage ratio
 
 ## Appendix:
 This project was inspired by
