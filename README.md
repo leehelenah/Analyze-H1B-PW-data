@@ -32,7 +32,7 @@ load the data back into S3
 
 
 ## Data Scehma
-
+I choose star schema. It is great to simplify the queries and join tables.
 ![image](https://user-images.githubusercontent.com/42988516/134633419-53d6167b-edf4-4d0c-bc82-af762cc2008f.png)
 
 **PW** - Prevailing Wage <br>
@@ -65,7 +65,7 @@ The data was increased by 100x. <br>
 The pipelines would be run on a daily basis by 7 am every day. <br>
  --> We can utilize Airflow or AWS Glue and set up daily pipeline. <br>
 The database needed to be accessed by 100+ people. <br>
- --> Not a problem at all. The data is on S3. We can share access with all of them. <br>
+ --> CAP stands for Consistency, Availability and Partition Tolerance. In general, its impossible for a distributed system to guarantee above three at a given point. Based on the CAP theory, we can choose a database that that allows for greater accessibility, such as Cassandra. <br>
 
 ## Why Spark
 Spark is suitable for large dataset and supports parallel operations. Also, it supports sql queries. As I am going to further analyze the data, this is quite helpful.
