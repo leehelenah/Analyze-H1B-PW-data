@@ -61,7 +61,34 @@ I choose star schema. It's a greate choice as I'm going to join the tables and p
 
 
 **Dimensional table - PW** - Prevailing Wage <br>
-CASE_STATUS, PWD_SOC_CODE, PWD_WAGE_RATE, PRIMARY_WORKSITE_CITY, PRIMARY_WORKSITE_COUNTY, PRIMARY_WORKSITE_STATE, PRIMARY_WORKSITE_POSTAL_CODE, EMPLOYER_CITY, EMPLOYER_STATE, EMPLOYER_POSTAL_CODE, EMPLOYER_COUNTRY, BUSINESS_NAME, JOB_TITLE, SUGGESTED_SOC_CODE, SUGGESTED_SOC_TITLE, PRIMARY_EDUCATION_LEVEL, OTHER_EDUCATION, MAJOR, SECOND_DIPLOMA, SECOND_DIPLOMA_MAJOR, FILE_SOURCE, WORKSITE_COUNTY_UPPER
+| Column Name                  | Data Type | Description |
+|------------------------------|-----------|-------------|
+| id                           | long      |(New) Unique Identifier |
+| CASE_STATUS                  | string    |Status associated with the last significant event or decision. Valid values include “Determination Issued”, “Redetermination Affirmed”, “Redetermination Modified”, “Center Director Review Affirmed Determination”, “Center Director Review Modified Determination”, and “Withdrawn”. After processing, the status must be Determination |
+| PWD_SOC_CODE                 | string    |Standard Occupational Classification (SOC)/Occupational Network (O*NET) code for the occupation issued by OFLC, as classified by the Standard Occupational Classification (SOC) System. |
+| PWD_WAGE_RATE                | integer   |Prevailing wage rate issued by OFLC. |
+| PRIMARY_WORKSITE_CITY        | string    |Primary worksite |
+| PRIMARY_WORKSITE_COUNTY      | string    |Primary worksite |
+| WORKSITE_COUNTY_UPPER        | string    |Primary worksite |
+| PRIMARY_WORKSITE_STATE       | string    |Primary worksite |
+| PRIMARY_WORKSITE_POSTAL_CODE | string    |Primary worksite |
+| EMPLOYER_CITY                | string    |Contact information of the employer requesting the prevailing wage determination. |
+| EMPLOYER_STATE               | string    |Contact information of the employer requesting the prevailing wage determination. |
+| EMPLOYER_POSTAL_CODE         | integer   |Contact information of the employer requesting the prevailing wage determination. |
+| EMPLOYER_COUNTRY             | string    |Contact information of the employer requesting the prevailing wage determination. |
+| BUSINESS_NAME                | string    |Legal business name of the employer |
+| JOB_TITLE                    | string    |Title of the employer’s job |
+| SUGGESTED_SOC_CODE           | string    |Employer-suggested code for the job described in the prevailing wage determination |
+| SUGGESTED_SOC_TITLE          | string    |Employer-suggested title for the job described in the prevailing wage determination |
+| PRIMARY_EDUCATION_LEVEL      | string    |The minimum U.S. diploma or degree required by the employer for the job opportunity |
+| OTHER_EDUCATION              | string    |If “Other”, the specific U.S. diploma or degree required |
+| MAJOR                        | string    |Major(s) and/or field(s) of study required by the employer for the job opportunity. |
+| SECOND_DIPLOMA               | string    |Indicates if the employer requires a second U.S diploma or degree for the job.|
+| SECOND_DIPLOMA_MAJOR         | string    |The second U.S. diploma or degree and major(s) and/or fields(s) of study required by the employer for the job opportunity, if applicable. |
+| FILE_SOURCE           | string    |(New) From which file download from Department of Labor. |
+
+
+Reference: https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/PW_Record_Layout_FY2021_Q3_old_form.pdf
 
 **Dimensional table - LCA** - H1B applicant's data <br>
 | Column Name           | Data Type | Description       |
