@@ -13,22 +13,36 @@ Most of my income spend on rent. I would like to know if the same happen to all 
 ## Data Quality Checks and ETL pipeline:
 
 ### step 1: Get the wage data
-download the data from Department of Labor
-exploratory data analysis
+download the data from Department of Labor <br>
+exploratory data analysis <br>
 
 ### step 2: Get the housing data
-download the data from Zillow
-exploratory data analysis
+download the data from Zillow <br>
+exploratory data analysis <br>
 
 ### step 3: Build an ETL pipeline for the wage data
-extract data from S3
-process them using Spark
-load the data back into S3
+Extract data from S3 -> process them using Spark -> load the data back into S3 <br>
+
+Data Quality Checks for LCA: <br>
+* CASE_STATUS must be certified
+* must have DECISION_DATE
+* must have JOB_TITLE, SOC_CODE, SOC_TITLE, FULL_TIME_POSITION
+* FULL_TIME_POSITION must be true
+* must have WORKSITE_COUNTY, WORKSITE_STATE, WORKSITE_POSTAL_CODE, EMPLOYER_NAME
+
+Data Quality Checks for PW: <br>
+* must have PWD_SOC_CODE, PWD_WAGE_RATE
+* must have PRIMARY_WORKSITE_CITY, PRIMARY_WORKSITE_STATE, PRIMARY_WORKSITE_POSTAL_CODE
+* CASE_STATUS must be Determination Issued, cannot be Withdrawn
+* must have EMPLOYER_LEGAL_BUSINESS_NAME
+* must have EMPLOYER_CITY, EMPLOYER_STATE, EMPLOYER_POSTAL_CODE
+* EMPLOYER_COUNTRY must be UNITED STATES OF AMERICA
+* must have JOB_TITLE, SUGGESTED_SOC_CODE, SUGGESTED_SOC_TITLE
 
 ### step 4: Build an ETL pipeline for the housing data
-extract data from S3
-process them using Spark
-load the data back into S3
+Extract data from S3 -> process them using Spark -> load the data back into S3 <br>
+
+### step 5: If data schema of every table matches data model
 
 
 ## Data Scehma
