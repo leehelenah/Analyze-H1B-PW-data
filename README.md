@@ -50,7 +50,15 @@ I choose star schema. It's a greate choice as I'm going to join the tables and p
 ![image](schema.jpg)
 
 **Fact table - Zillow_price_rent** - Data from Zillow, average home rent and price by zipcode <br>
-Zipcode, State, Metro, CountyName, 2021_07_Price, 2021_07_Rent
+| Column Name   | Data Type | Description                                                |
+|---------------|-----------|------------------------------------------------------------|
+| Zipcode       | long      | Zip Code in United States                                  |
+| State         | string    | State (Abbreviation)                                       |
+| Metro         | string    | Metropolitan area                                          |
+| CountyName    | string    | County                                                     |
+| 2021_07_Price | double    | Zillow home value index in 2020/07 (Adjusted, Smoothed)    |
+| 2021_07_Rent  | double    | Zillow observed rent index in 2020/07 (Adjusted, Smoothed) |
+
 
 **Dimensional table - PW** - Prevailing Wage <br>
 CASE_STATUS, PWD_SOC_CODE, PWD_WAGE_RATE, PRIMARY_WORKSITE_CITY, PRIMARY_WORKSITE_COUNTY, PRIMARY_WORKSITE_STATE, PRIMARY_WORKSITE_POSTAL_CODE, EMPLOYER_CITY, EMPLOYER_STATE, EMPLOYER_POSTAL_CODE, EMPLOYER_COUNTRY, BUSINESS_NAME, JOB_TITLE, SUGGESTED_SOC_CODE, SUGGESTED_SOC_TITLE, PRIMARY_EDUCATION_LEVEL, OTHER_EDUCATION, MAJOR, SECOND_DIPLOMA, SECOND_DIPLOMA_MAJOR, FILE_SOURCE, WORKSITE_COUNTY_UPPER
