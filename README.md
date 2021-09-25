@@ -64,7 +64,28 @@ I choose star schema. It's a greate choice as I'm going to join the tables and p
 CASE_STATUS, PWD_SOC_CODE, PWD_WAGE_RATE, PRIMARY_WORKSITE_CITY, PRIMARY_WORKSITE_COUNTY, PRIMARY_WORKSITE_STATE, PRIMARY_WORKSITE_POSTAL_CODE, EMPLOYER_CITY, EMPLOYER_STATE, EMPLOYER_POSTAL_CODE, EMPLOYER_COUNTRY, BUSINESS_NAME, JOB_TITLE, SUGGESTED_SOC_CODE, SUGGESTED_SOC_TITLE, PRIMARY_EDUCATION_LEVEL, OTHER_EDUCATION, MAJOR, SECOND_DIPLOMA, SECOND_DIPLOMA_MAJOR, FILE_SOURCE, WORKSITE_COUNTY_UPPER
 
 **Dimensional table - LCA** - H1B applicant's data <br>
-CASE_STATUS, DECISION_DATE, JOB_TITLE, SOC_CODE, SOC_TITLE, FULL_TIME_POSITION, WORKSITE_COUNTY, WORKSITE_STATE, WORKSITE_POSTAL_CODE, EMPLOYER_NAME, WAGE_RATE_OF_PAY_FROM, WAGE_RATE_OF_PAY_TO, WAGE_UNIT_OF_PAY, PREVAILING_WAGE, PW_UNIT_OF_PAY, ANNUAL_INCOME, FILE_SOURCE, WORKSITE_COUNTY_UPPER
+| Column Name           | Data Type | Description       |
+|-----------------------|-----------|-------------------|
+| id                    | long      |(New) Unique Identifier |
+| JOB_TITLE             | string    |Title of the job. Form ETA-9035 Section B, Item 1|
+| SOC_CODE              | string    |Occupational code associated with the job being requested for temporary labor condition, as classified by the Standard Occupational Classification (SOC) System. Form ETA-9035 Section B, Item 2.|
+| SOC_TITLE             | string    |Occupational title associated with the SOC/O*NET Code. Form ETA9035 Section B, Item 3 |
+| FULL_TIME_POSITION    | string    |Y = Full Time Position; N = Part Time Position|
+| WORKSITE_COUNTY       | string    |Worksite Location|
+| WORKSITE_COUNTY_UPPER | string    |Worksite Location|
+| WORKSITE_STATE        | string    |Worksite Location|
+| WORKSITE_POSTAL_CODE  | integer   |Worksite Location|
+| EMPLOYER_NAME         | string    |Legal business name of the employer submitting the Labor Condition Application.|
+| WAGE_RATE_OF_PAY_FROM | integer   |Wage paid to nonimmigrant workers at the First Worksite Location - lower bound. |
+| WAGE_RATE_OF_PAY_TO   | integer   |Wage paid to nonimmigrant workers at the First Worksite Location - upper bound. |
+| WAGE_UNIT_OF_PAY      | string    |Unit of pay values include “Hour”, “Week”, “Bi-Weekly”, “Month”, and “Year”.|
+| PREVAILING_WAGE       | integer   |Prevailing Wage for the job being requested for First Worksite Location|.
+| PW_UNIT_OF_PAY        | string    |Unit of Prevailing Wage Pay for First Worksite Location. |
+| ANNUAL_INCOME         | integer   |(New) Annual income derived from WAGE_RATE_OF_PAY_FROM. |
+| FILE_SOURCE           | string    |(New) From which file download from Department of Labor. |
+
+Reference: https://www.dol.gov/sites/dolgov/files/ETA/oflc/pdfs/LCA_Record_Layout_FY20.pdf
+
 
 
 ## This report shows
