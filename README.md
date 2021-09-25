@@ -10,7 +10,7 @@ Most of my income spend on rent. I would like to know if the same happen to all 
 
 **Home Rent and Price** - Data from Zillow. Size: 2 files, 60k rows. <br>
 
-## Data Quality Check and ETL pipeline:
+## Data Quality Checks and ETL pipeline:
 
 ### step 1: Get the wage data
 download the data from Department of Labor
