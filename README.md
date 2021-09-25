@@ -32,7 +32,7 @@ load the data back into S3
 
 
 ## Data Scehma
-I choose star schema. It is great to simplify the queries and join tables.
+I choose star schema. It's a greate choice as I'm going to join the tables and perform analysis. It's easy to understand and build.
 ![image](schema.jpg)
 
 **PW** - Prevailing Wage <br>
