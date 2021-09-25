@@ -42,8 +42,11 @@ Data Quality Checks for PW: <br>
 ### step 4: Build an ETL pipeline for the housing data
 Extract data from S3 -> process them using Spark -> load the data back into S3 <br>
 
-### step 5: Data Quality Checks - If data schema of every table matches data model
-
+### step 5: Post-processing Data Quality Checks
+After saving data to spark, check if
+* If number of rows > 0
+* If number of columns > 0
+* If data schema is what we expect to see
 
 ## Data Scehma
 I choose star schema. It's a greate choice as I'm going to join the tables and perform analysis. It's easy to understand and build.
