@@ -42,7 +42,7 @@ Data Quality Checks for PW: <br>
 ### step 4: Build an ETL pipeline for the housing data
 Extract data from S3 -> process them using Spark -> load the data back into S3 <br>
 
-### step 5: If data schema of every table matches data model
+### step 5: Data Quality Checks - If data schema of every table matches data model
 
 
 ## Data Scehma
