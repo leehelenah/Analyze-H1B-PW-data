@@ -1,6 +1,8 @@
 import os
 import query
 from spark_utils import create_spark_session
+from pyspark.sql.functions import col
+from pyspark.sql.functions import monotonically_increasing_id
 
 def process_LCA_data(spark, input_data, output_data, view = 'LCA', mode = 'append'):
     """
@@ -36,15 +38,24 @@ def process_LCA_data(spark, input_data, output_data, view = 'LCA', mode = 'appen
                     'PREVAILING_WAGE','PW_UNIT_OF_PAY']
                   ].na.drop(subset = non_na)
     
+    df_dropna = df_dropna.withColumn("WAGE_RATE_OF_PAY_FROM",col("WAGE_RATE_OF_PAY_FROM").cast("int"))
     
+    df_dropna = df_dropna.withColumn("WAGE_RATE_OF_PAY_TO",col("WAGE_RATE_OF_PAY_TO").cast("int"))
+    
+    df_dropna = df_dropna.withColumn("PREVAILING_WAGE",col("PREVAILING_WAGE").cast("int"))
+    
+    df_dropna = df_dropna.withColumn("WORKSITE_POSTAL_CODE",col("WORKSITE_POSTAL_CODE").cast("int"))
+                                     
     df_dropna.createOrReplaceTempView(view)
 
     output = spark.sql(query.LCA.format(view=view, file_source=file_source))
     
+    output = output.select("*").withColumn("id", monotonically_increasing_id())
+    
     print('count after processing', output.count())
     
     output.write.parquet(os.path.join(output_data, view), mode=mode)
-    
+                                     
     print('write to', os.path.join(output_data, view) )
     
     return output.limit(100).toPandas()
@@ -82,14 +93,20 @@ def process_prevailing_wage_data(spark, input_data, output_data, view = 'PW', mo
 
     df_dropna = df[columns].na.drop(subset = non_na)
     
-    df_dropna.createOrReplaceTempView(view)
+    df_dropna = df_dropna.withColumn("EMPLOYER_POSTAL_CODE",col("EMPLOYER_POSTAL_CODE").cast("int"))
+    
+    df_dropna = df_dropna.withColumn("PWD_WAGE_RATE",col("PWD_WAGE_RATE").cast("int"))
 
+    df_dropna.createOrReplaceTempView(view)
+    
     output = spark.sql(query.PW.format(view=view, file_source=file_source))
     
+    output = output.select("*").withColumn("id", monotonically_increasing_id())
+    
     print('count after processing', output.count())
-    
-    output.write.parquet(os.path.join(output_data, view), mode=mode)
-    
+                                         
+    output.write.parquet(os.path.join(output_data, view), mode=mode)    
+                                     
     print('write to', os.path.join(output_data, view))
     
     return output.limit(100).toPandas()
@@ -109,8 +126,9 @@ def main():
 
     
     output_PW = os.path.join(bucket, 'processed_data')
+    
     for pw_csv in ['PW_Disclosure_Data_FY2019.csv',
-                   'PW_Disclosure_Data_FY2020.csv']:
+                   'PW_Disclosure_Data_FY2020.csv']:        
         input_data = os.path.join(bucket, 'Prevailing_Wage', pw_csv)
         process_prevailing_wage_data(spark, input_data, output_PW, mode='overwrite')
 
