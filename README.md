@@ -43,7 +43,7 @@ Data Quality Checks for PW: <br>
 Extract data from S3 -> process them using Spark -> load the data back into S3 <br>
 
 ### step 5: Post-processing Data Quality Checks
-After Step 1 to 4, check the tables to see if
+After Step 1 to 4, check the tables to see
 * If number of rows > 0
 * If number of columns > 0
 * If data schema is what we expect to see
